@@ -1,0 +1,37 @@
+Requirements
+
+File Upload and Preprocessing:
+
+    Frontend: HTML, CSS, JavaScript (for user interface and file upload).
+    Backend: Python (Flask/Django for request handling).
+    File Handling: PyPDF2 or pdfminer for extracting pages from PDFs.
+
+OCR (Optical Character Recognition):
+
+    Engine: Tesseract OCR (via pytesseract) to convert handwritten/printed text into machine-readable form.
+    Preprocessing: Ghostscript for PDF conversion, OpenCV for denoising, deskewing, and contrast enhancement.
+                    Text Extraction and Parsing:
+    Regular Expressions: PythonÕs re module to extract key diagnostic terms from the OCR output
+
+Natural Language Processing (NLP):
+
+    Libraries: spaCy or NLTK for text processing.
+    Named Entity Recognition (NER): Custom models to identify medical diagnoses.
+    Medical Vocabulary: Integration with ICD-10 for diagnosis validation.
+
+Machine Learning:
+    Hidden Markov Model (HMM): Used to identify patterns in medical terms and correct extraction errors.
+    Model Training: Scikit-learn or TensorFlow/PyTorch for supervised learning.
+
+Post-Processing and Validation:
+
+    Data Validation: HMM and rule-based techniques for accuracy verification.
+    Cross-Referencing: Use of medical term databases (UMLS, SNOMED) for validation.
+
+CSV Generation:
+    CSV Handling: Pandas for structured data output.
+
+Deployment:
+
+    API: Flask/Django for API management.
+    Cloud Storage: AWS S3 or Google Cloud for file storage.
